@@ -29,6 +29,7 @@ I'll be adding the following:
 2. Ignite configurations(config.xml, persistence.xml)
 3. Cassandra's client program.
 4. Ignite's client program.
+5. Table(on which read queries are being done)
 
 
 
