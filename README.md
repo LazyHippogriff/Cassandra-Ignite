@@ -14,6 +14,8 @@ Scenario 1: 21K rows/second.
 
 Scenario 2: 23K rows/second.
 
+In both the scenarios, 10 threads were used by the client program.
+
 Please note:
 
 * Cassandra cluster contains only 1 node.
