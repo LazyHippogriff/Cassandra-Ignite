@@ -21,7 +21,7 @@
 #include "ignite/ignite.h"
 #include "ignite/ignition.h"
 
-#include "RtCassEpcTableDataIgnite.hpp"
+#include "RtCassTableDataIgnite.hpp"
 
 #include<stdlib.h>
 #include<pthread.h>
@@ -69,12 +69,12 @@ void *threadFunc(void *arg)
 	ThreadDataVo  l_obj = *(ThreadDataVo *)arg;
 	long imsi =  l_obj.start ;
 	long threadExpiration= l_obj.numberOfSubs;
-	Cache<string, RtCassEpcTableData> cache = grid.GetCache<string, RtCassEpcTableData>("cache1");
+	Cache<string, RtCassTableData> cache = grid.GetCache<string, RtCassTableData>("cache1");
 
 	while(threadExpiration > 0)
 	{
-		RtCassEpcTableData l_epcdata;
-		l_epcdata=RtCassEpcTableData(10);
+		RtCassTableData l_epcdata;
+		l_epcdata=RtCassTableData(10);
 		char l_imsi[IMSI_SIZE] = {0};
                 sprintf(l_imsi,"%ld",imsi);
 	
@@ -83,7 +83,7 @@ void *threadFunc(void *arg)
 		strncpy(l_epcdata.m_imsi,l_imsi,IMSI_SIZE);
 
 		IgniteError l_error;
-		RtCassEpcTableData dataFromCache = cache.Get(l_imsi,l_error);
+		RtCassTableData dataFromCache = cache.Get(l_imsi,l_error);
 
 		imsi++;
 		threadExpiration--;
@@ -116,9 +116,9 @@ int main(int argc, char *argv[])
 
 
 		grid = Ignition::Start(cfg);       // Start a node.
-		Cache<string, RtCassEpcTableData> cache1 = grid.GetCache<string, RtCassEpcTableData>("cache1"); // Get cache instance.
+		Cache<string, RtCassTableData> cache1 = grid.GetCache<string, RtCassTableData>("cache1"); // Get cache instance.
 
-		cout<<"\n sizeof(RtCassEpcTableData)-->"<<sizeof(RtCassEpcTableData)<<endl;
+		cout<<"\n sizeof(RtCassTableData)-->"<<sizeof(RtCassTableData)<<endl;
 		int32_t l_noOfKeyCache = cache1.LocalSize();
 		cout<<"\n l_noOfKeyCache -->"<<l_noOfKeyCache<<endl;
 
