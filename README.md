@@ -19,6 +19,7 @@ Cassandra cluster contains only 1 node.
 No. of processors: 24
 Total RAM: 62 GB
 Cassandra version: 3.11.2
+Table contains 2 columns, primary key is of string type and the second column is of blob type. The second column is being used to store a C++ structure of size ~7KB.
 
 Also, in the 2nd scenario, Ignite-C++ server is running on top of Cassandra. The client program in both cases also runs on the same node.
 
