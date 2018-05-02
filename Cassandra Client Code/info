@@ -1,1 +1,8 @@
-  Info
+ /* Details of the code */
+ 
+ * RtConnectionObj.hpp is the header file containing the "connection to cassandra" specific code.
+ 
+ * RtCassStaticDataDao.hpp is the header file containing the c++ structure and the code for fetching the data.
+ 
+ * RtCassTableDataVo  is the structure that has been stored in the blob.
+ 
