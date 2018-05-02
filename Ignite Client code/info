@@ -1,1 +1,14 @@
-  Info
+/* Details about the client main program  */
+
+
+* RtCassTableDataIgnite.hpp is the header file containing the structure i.e. RtCassTableData which is stored in the Blob.
+
+* The program takes 2 inputs, number of threads and the number of rows to read.
+
+* The number of rows are equally distributed among the number of threads.
+
+* At the end of the program, throughput has been calculated.
+
+
+
+
