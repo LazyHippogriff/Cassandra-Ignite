@@ -1,0 +1,4 @@
+<persistence keyspace="test" table="blob_table">
+    <keyPersistence class="java.lang.String" strategy="PRIMITIVE" column="name"/>
+    <valuePersistence strategy="BLOB" column="data" serializer="org.apache.ignite.cache.store.cassandra.serializer.JavaSerializer"/>
+</persistence>
