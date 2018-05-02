@@ -29,8 +29,8 @@ I'll be adding the following:
 
 1. Cassandra configurations(cassandra.yaml, cassandra-env.sh, jvm.options)
 2. Ignite configurations(config.xml, persistence.xml)
-3. Cassandra's client program.
-4. Ignite's client program.
+3. Cassandra's client program(only the main file).
+4. Ignite's client code(only the main file).
 5. Cassandra's Table Description(on which read queries are being done)
 
 
