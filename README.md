@@ -1,6 +1,6 @@
 # Standalone Cassandra vs Cassandra+Ignite
 
-This repository was created in reference to the stack overflow question: https://stackoverflow.com/q/50094732/5701173
+This repository has been created in reference to the stack overflow question: https://stackoverflow.com/q/50094732/5701173
 
 As mentioned in the SO question, I'm comparing the throughput(number of rows read per second) of a table stored in Cassandra in 2 scenarios:
 
