@@ -11,6 +11,7 @@ Scenario 2: Ignite-C++ added to Cassandra for caching and then the read query is
 Currently, the read throughput in both the above scenarios has been as follows:
 
 Scenario 1: 21K rows/second.
+
 Scenario 2: 23K rows/second.
 
 Please note:
